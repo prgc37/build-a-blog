@@ -1,0 +1,11 @@
+{% extends "blogbase.html" %}
+
+{% block content %}
+
+		<div class="entry">
+			<div class="entry-title"><h2>{{title}}</h2></div>
+			<pre class="entry-body">{{entry}}</pre>
+		</div>
+		<div class="error" style="color:red">{{error}}</div>
+
+{% endblock %}

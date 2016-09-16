@@ -1,0 +1,27 @@
+{% extends "blogbase.html" %}
+
+{% block content %}
+		<form method="post">
+			<label>
+				<div>And THIS Post Shall Be Called...</div>
+				<input type="text" name="title" value="{{title}}">
+			</label>
+			<br>
+
+			<label>
+				<div>Preach brotha (...or sista?...) !</div>
+				<textarea name="entry">{{entry}}</textarea>
+			</label>
+
+			<div class="error" style="color:red">{{error}}</div>
+			<input type="submit">
+		</form>
+
+		{% for entry in entries5 %}
+			<div class="entry">
+				<div class="entry-title"><h2>{{entry.title}}</h2></div>
+				<pre class="entry-body">{{entry.entry}}</pre>
+			</div>
+		{% endfor %}
+
+{% endblock %}
